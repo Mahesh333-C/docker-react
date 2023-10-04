@@ -29,7 +29,7 @@ jobs:
 
       - name: Push Docker Image
         run: |
-          echo ${{ secrets.DOCKER_USERNAME }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
+          echo ${{ secrets.DOCKER_USERNAME }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --p-stdin
           docker push mahec/angular:latest
           
       # - name: Push Docker Image
